@@ -16,7 +16,7 @@ Step:1 Create Context so here we are creating Context by using this inBuild func
     --> So here we are create context using this function createContext()
 
     --> And also we are creating one function which is returing that AppContext.Provider 
-        data in our whole app
+        data in our whole app...
 
 */
 
@@ -32,7 +32,16 @@ export const AlertFun2 = () => {
 
 
 /* 
-    --> 
+    --> This is function which is returing AppContext.Provider and then we wrap
+        our whole between this function like this
+
+        <AppContextProvider>
+             <App/>
+        </AppContextProvider>
+
+        So it means our whole app now access whole data inside that AppContextProvider
+        function like example function and data variables...
+
 */
 const AppContextProvider = ({ children }) => {
   const data = "Hello World";
