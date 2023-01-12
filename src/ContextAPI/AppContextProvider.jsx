@@ -11,18 +11,29 @@ Step:1 Create Context so here we are creating Context by using this inBuild func
     
 */
 
-export const AppContext = createContext();
+/*  Step:1 --> Creating Context phase 
 
-/* 
---> So here we are Making a function and that function returning AppContextProvider
-    means what value we can write here and pass using that AppContext.Provider
-    we can use anywhere 
-    only we have to wrap our main inside 
-    <AppContext.Provider>
-         <Main/APP>
-    </AppContext.Provider>
+    --> So here we are create context using this function createContext()
+
+    --> And also we are creating one function which is returing that AppContext.Provider 
+        data in our whole app
+
 */
 
+export const AppContext = createContext();
+
+
+
+
+export const AlertFun2 = () => {
+  alert("Kya haal hai..");
+};
+
+
+
+/* 
+    --> 
+*/
 const AppContextProvider = ({ children }) => {
   const data = "Hello World";
 
@@ -37,7 +48,7 @@ const AppContextProvider = ({ children }) => {
     */
 
   return (
-    <AppContext.Provider value={{ data, AlertFun }}>
+    <AppContext.Provider value={{ data, AlertFun, AlertFun2 }}>
       {children}
     </AppContext.Provider>
   );
